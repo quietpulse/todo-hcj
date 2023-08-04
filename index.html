@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="shortcut icon" href="assets/app_logo.ico" type="image/x-icon">
+	<link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>To Do - Desktop WebApp.</title>
+</head>
+
+<body>
+	<section id="nav">
+		<div id="nav-left">
+			<h1>Good <span id="noone"></span></h1>
+		</div>
+		<div id="nav-right">
+			<a href="https://github.com/aiamanme" title="My Github!">
+				<span class="material-symbols-outlined">
+					device_hub
+				</span>
+			</a>
+		</div>
+	</section>
+	<section id="main">
+		<div id="progress-main-box">
+			<p id="progress-date"></p>
+			<h1>Today's progress</h1>
+			<p id="complate">0/0</p>
+			<h2><span id="percentage">0</span>%</h2>
+			<div id="progress-bar">
+				<div id="progress-line"></div>
+			</div>
+		</div>
+		<div id="todo-main-box">
+			<h1>To-do's <span id="ongoing-count">0</span></h1>
+			<div id="todolist">
+				<ul id="todobox"></ul>
+			</div>
+			<div id="add-button">
+				<button onclick="addTask()" title="Add New Task.">
+					<i class="material-symbols-outlined">
+						add_task
+					</i>
+				</button>
+			</div>
+			<div class="addtask-hide">
+				<div id="addtask-main-box">
+					<input type="text" name="tasktitle" id="tasktitle" placeholder="Add your title here...">
+					<textarea id="taskdescription" name="subject" placeholder="Write something for your description.." style="height:200px"></textarea>
+					<div id="buttom">
+						<button type="submit" id="submit" onclick="addNewTask()" title="Submit Task!">Submit <i
+								class="material-symbols-outlined">chevron_right</i></button>
+						<button id="close" onclick="hideTask()" title="Close"><i class="material-symbols-outlined">close</i></button>
+					</div>
+				</div>
+			</div>
+			<div class="changetask-hide">
+				<div id="changetask-main-box">
+					<input type="text" name="tasktitle" id="changetitle" placeholder="Add your title here...">
+					<textarea id="changedescription" name="subject" placeholder="Write something for your description.." style="height:200px"></textarea>
+					<div id="buttom">
+						<button type="submit" id="submit" onclick="changeTask()" title="Submit Task!">Save change !</button>
+					</div>
+				</div>
+			</div>
+	</section>
+</body>
+<script src="script.js"></script>
+
+</html>

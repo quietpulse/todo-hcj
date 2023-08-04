@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900;1,1000&display=swap');
+
+* {
+    font-family: 'Ysabeau Office', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 700,
+        'GRAD' 0,
+        'opsz' 28;
+    font-size: 20px;
+    display: flex;
+}
+
+/* Navegction bar */
+#nav {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 26px;
+}
+
+#nav-left h1 {
+    font-weight: 800;
+    color: #090909;
+}
+
+#nav-left span {
+    color: #9b9b9b;
+}
+
+#nav-right a {
+    color: #282930;
+    text-decoration: none;
+}
+
+#nav-right {
+    margin: 0px 10px;
+}
+
+/* Main Bar */
+#main {
+    margin-top: 2%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 30% 70%;
+}
+
+#progress-main-box {
+    border-radius: 25px;
+    background-color: #282930;
+    padding: 25px;
+    max-width: 280px;
+    max-height: 290px;
+    margin: 10px 50px;
+}
+
+#progress-main-box h1 {
+    color: #f5f5f5;
+}
+
+#progress-date {
+    font-size: 18px;
+    margin: 5px 0px;
+    font-weight: 800;
+    color: #9b9b9b;
+}
+
+#complate {
+    font-size: 18px;
+    line-height: 0px;
+    font-weight: 800;
+    color: #9b9b9b;
+    margin-top: 78px;
+}
+
+#progress-main-box h2 {
+    font-size: 70px;
+    color: #f5f5f5;
+}
+
+#progress-line {
+    transition: all 0.5s;
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgb(231, 231, 231) 0%, rgb(234, 203, 255) 46%, rgb(251, 253, 189) 100%);
+    padding: 20px 0px;
+    margin: 5px;
+    width: 0%;
+    max-width: 243px;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#progress-bar {
+    border-radius: 24px;
+    border: #9b9b9b solid 4px;
+}
+
+#todo-main-box {
+    margin: 0px 100px;
+}
+
+#todo-main-box h1 {
+    letter-spacing: 1px;
+    font-weight: 800;
+    font-size: 25px;
+}
+
+#todolist {
+    height: 350px;
+    max-height: 470px;
+    max-width: 1000px;
+    overflow: auto;
+    margin: 20px 30px;
+}
+
+#todolist ul {
+    text-decoration: none;
+}
+
+#todolist ul p {
+    width: 450px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#todolist ul h1 {
+    width: 550px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#todolist li {
+    margin: 15px 0px;
+    display: flex;
+}
+
+#todolist button {
+    margin: 15px;
+    border-radius: 10px;
+    padding: 3px;
+    border: none;
+    background-color: #fff59f;
+    cursor: pointer;
+}
+
+#add-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 85%;
+    left: 93%;
+}
+
+#add-button button {
+    color: #ebebeb;
+    cursor: pointer;
+    margin: 0px 5px;
+    padding: 11px;
+    border-radius: 100px;
+    border: none;
+    background-color: #9b82f6;
+    transition: all 0.3s;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#add-button button:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.61);
+    background-color: #8a75da;
+}
+
+.addtask-hide {
+    visibility: hidden;
+    display: none;
+}
+
+.addtask {
+    padding: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background 1s;
+    visibility: visible !important;
+    background-color: #030204d8 !important;
+}
+
+.changetask-hide {
+    visibility: hidden;
+    display: none;
+}
+
+.changetask {
+    padding: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background 1s;
+    visibility: visible !important;
+    background-color: #030204d8 !important;
+}
+
+#changetask-main-box {
+    background-color: #fff1c3c5;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+#addtask-main-box {
+    background-color: #fff1c3c5;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+#changetitle, #changedescription {
+    font-size: 15px;
+    font-weight: 600;
+    color: #030204;
+    width: 420px;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+}
+
+#tasktitle, #taskdescription {
+    font-size: 15px;
+    font-weight: 600;
+    color: #030204;
+    width: 420px;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+}
+
+#submit {
+    display: flex;
+    padding: 10px 10px 10px 15px !important;
+    color: #ebebeb;
+    cursor: pointer;
+    margin: 0px 5px;
+    padding: 11px;
+    border-radius: 100px;
+    border: none;
+    background-color: #9b82f6;
+    transition: all 0.3s;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+#submit:hover {
+    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.411);
+    background-color: #8a75da;
+}
+
+#buttom {
+    display: flex;
+    justify-content: space-between;
+}
+
+#close {
+    padding: 10px !important;
+    color: #ebebeb;
+    cursor: pointer;
+    margin: 0px 5px;
+    padding: 11px;
+    border-radius: 100px;
+    border: none;
+    background-color: #9b82f6;
+    transition: all 0.3s;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+#close:hover {
+    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.411);
+    background-color: #8a75da;
+}
+
+#ongoing-count {
+    font-size: 18px;
+    color: #5c5c5c;
+}
+
+.taskDetail {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    #main {
+        display: contents;
+        justify-content: center;
+    }
+
+    #progress-main-box {
+        margin: 30px 20px;
+    }
+
+    #todo-main-box {
+        margin: 40px 30px;
+    }
+
+    #todolist {
+        margin: 0px;
+        height: max-content;
+        max-height: max-content;
+    }
+
+    #todolist ul h1 {
+        width: 230px;
+    }
+
+    #todolist ul p {
+        width: 230px;
+    }
+
+    #add-button {
+        top: 90%;
+        left: 80%;
+    }
+
+    #addtask-main-box {
+        width: 310px;
+    }
+
+    #tasktitle {
+        max-width: 270px;
+    }
+
+    #taskdescription {
+        max-width: 270px;
+    }
+}
